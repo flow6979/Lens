@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "LCNC Lens",
+  "version": "1.0",
+  "description": "Calls the copilot API with custom headers and body.",
+  "permissions": ["storage", "cookies"],
+  "host_permissions": [
+    "https://8ffd3ffbecfb.ngrok-free.app/*",
+    "https://github.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/lcnc_logo.jpeg",
+      "32": "assets/lcnc_logo.jpeg",
+      "48": "assets/lcnc_logo.jpeg",
+      "128": "assets/lcnc_logo.jpeg"
+    }
+  },
+  "icons": {
+    "16": "assets/lcnc_logo.jpeg",
+    "32": "assets/lcnc_logo.jpeg",
+    "48": "assets/lcnc_logo.jpeg",
+    "128": "assets/lcnc_logo.jpeg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.zenduty.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
