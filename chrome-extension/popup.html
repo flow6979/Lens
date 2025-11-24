@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LCNC Lens</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="icon" type="image/jpeg" href="assets/lcnc_logo.jpeg">
+</head>
+<body>
+    <div id="bg-fade"></div>
+    <img src="assets/lcnc_logo.jpeg" alt="LCNC Logo" class="lcnc-logo">
+    <!-- <h2>LCNC Lens</h2> -->
+    <button id="callApi">Ops Analyser</button>
+    <h3>Response:</h3>
+    <div id="response"></div>
+    <div class="info">
+        If you see a URL error, reload the Zenduty page and try again.<br>
+        Make sure you are on an incident details page.<br>
+        Check the browser console for errors if it still fails.
+    </div>
+    <div class="quick-links">
+        <button id="listTestsBtn">List tests</button>
+        <button id="listBuildsBtn">List builds</button>
+        <button id="listLocalTestRunsBtn">List local test runs</button>
+        <span class="spacer"></span>
+        <div>
+            <input id="test_hashed_id" placeholder="test_hashed_id">
+            <button id="showTestBtn">Show test</button>
+        </div>
+        <div>
+            <input id="build_hashed_id" placeholder="build_hashed_id">
+            <button id="showBuildBtn">Show build</button>
+        </div>
+        <div>
+            <input id="test_run_hashed_id" placeholder="test_run_hashed_id">
+            <button id="showTestRunBtn">Show TRD</button>
+        </div>
+    </div>
+    <script src="env.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
