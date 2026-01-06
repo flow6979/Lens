@@ -2,6 +2,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.type === 'getUrl') {
     console.log('Content script received getUrl request');
     sendResponse({ url: window.location.href });
+  } else if (request.type === 'getCookies') {
+    console.log('Content script received getCookies request');
+    const cookieString = document.cookie;
+    
+    const match = cookieString.match(/csrftoken=([^;]+)/);
+    const csrftoken = match ? match[1] : '';
+    
+    sendResponse({ cookieString, csrftoken });
   } else {
     console.log('Content script received unknown request:', request);
   }
